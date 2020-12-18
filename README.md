@@ -25,12 +25,21 @@
  sudo docker build -f DockerfileMultiStage -t demo-book-api .
  ~~~
 
+**To build with Docker Compose:**
+ ~~~
+ sudo docker-compose -f docker-compose.yml up -d
+ ~~~
+ For development purpose:
+ ~~~
+ sudo docker-compose -f docker-compose.dev.yml up -d
+ ~~~
+
 **Run Docker Image:**
 Note: PORT 8080 must be free
  ~~~
  sudo docker run -p 8080:8080 demo-book-api
  ~~~
-
+ 
 **To run the Swagger UI:**
 ~~~
 http://localhost:8080/swagger-ui.html
