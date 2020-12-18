@@ -1,0 +1,6 @@
+version: '3.7'
+services:
+  web:
+    image: sazzadsh/demo-book-api.jar
+    ports:
+      - "8080:8080"
