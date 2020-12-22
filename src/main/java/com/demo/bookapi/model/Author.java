@@ -22,17 +22,6 @@ public class Author {
     @OneToMany(targetEntity = Book.class, cascade = CascadeType.ALL)
     private List books;
 
-//    @OneToMany
-//    @JoinTable
-//    private List<Book> bookList;
-//
-//    public List<Book> getBookList() {
-//        return bookList;
-//    }
-//
-//    public void setBookList(List<Book> bookList) {
-//        this.bookList = bookList;
-//    }
 
     public String getName(){
         return this.name;

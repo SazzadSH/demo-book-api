@@ -73,10 +73,10 @@ public class AuthorController {
     })
     public List<Author> getAuthors(
             @RequestParam(defaultValue = "0") Integer pageNo,
-            @RequestParam(defaultValue = "5") Integer pageSize,
-            @RequestParam(defaultValue = "id") String sortBy
+            @RequestParam(defaultValue = "5") Integer pageSize
+
     ){
-        return authorService.getAllAuthors(pageNo, pageSize, sortBy);
+        return authorService.getAllAuthors(pageNo, pageSize);
     }
 
     @GetMapping("/author/{id}/books/")

@@ -41,11 +41,11 @@ public class AuthorServiceImpl implements AuthorService {
     }
 
     @Override
-    public List<Author> getAllAuthors(int pageNo, int pageSize, String sortBy)
+    public List<Author> getAllAuthors(int pageNo, int pageSize)
     {
         List <Author> authorList = new ArrayList<>();
 
-        Pageable pageable = PageRequest.of(pageNo, pageSize, Sort.by(sortBy));
+        Pageable pageable = PageRequest.of(pageNo, pageSize);
         authorDAO.findAll(pageable).forEach(authorList::add);
 
         return authorList;
